@@ -1,7 +1,9 @@
 package dev.sink;
 
+import dev.sink.client.ParticleFactoryRegistry;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +21,12 @@ public class Sink {
 		ModItems.register(modEventBus);
 		ModBlocks.register(modEventBus);
 		ModBlockEntities.register(modEventBus);
+		ModParticles.register(modEventBus);
 		// Register fluid handler capabilities for the block entities
 		modEventBus.addListener(ModBlockEntities::registerCapabilities);
+		// Client-only registrations (粒子工厂等) — 仅构建/启动客户端逻辑，dedicated server 不加载
+		if (FMLEnvironment.dist.isClient()) {
+			modEventBus.addListener(ParticleFactoryRegistry::onRegisterParticleFactory);
+		}
 	}
 }

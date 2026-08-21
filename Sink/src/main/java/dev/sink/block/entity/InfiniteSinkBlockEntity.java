@@ -14,6 +14,8 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public class InfiniteSinkBlockEntity extends BlockEntity {
+	/** 无限水槽对外呈现的内容量（mB），永久保持不变，用于自动适配水龙头等读取方。 */
+	public static final int CONTENT = 10000;
 	private final InfiniteWaterHandler waterHandler = new InfiniteWaterHandler();
 
 	public InfiniteSinkBlockEntity(BlockPos pos, BlockState state) {
@@ -52,12 +54,12 @@ public class InfiniteSinkBlockEntity extends BlockEntity {
 
 		@Override
 		public FluidStack getFluidInTank(int tank) {
-			return new FluidStack(Fluids.WATER, -1);
+			return new FluidStack(Fluids.WATER, CONTENT);
 		}
 
 		@Override
 		public int getTankCapacity(int tank) {
-			return -1;
+			return CONTENT;
 		}
 
 		@Override
