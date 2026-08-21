@@ -1,5 +1,6 @@
 {
   "block.sink.infinite_sink": "无限水槽",
   "block.sink.infinite_lava_sink": "无限岩浆水槽",
+  "block.sink.faucet": "水龙头",
   "itemGroup.sink": "无限水槽模组"
 }

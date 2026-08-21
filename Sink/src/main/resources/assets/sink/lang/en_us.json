@@ -1,5 +1,6 @@
 {
   "block.sink.infinite_sink": "Infinite Sink",
   "block.sink.infinite_lava_sink": "Infinite Lava Sink",
+  "block.sink.faucet": "Faucet",
   "itemGroup.sink": "Infinite Sink Mod"
 }

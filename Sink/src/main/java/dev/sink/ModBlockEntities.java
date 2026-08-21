@@ -1,5 +1,6 @@
 package dev.sink;
 
+import dev.sink.block.entity.FaucetBlockTile;
 import dev.sink.block.entity.InfiniteLavaSinkBlockEntity;
 import dev.sink.block.entity.InfiniteSinkBlockEntity;
 import net.minecraft.core.registries.Registries;
@@ -21,6 +22,10 @@ public class ModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<InfiniteLavaSinkBlockEntity>> INFINITE_LAVA_SINK =
 		BLOCK_ENTITIES.register("infinite_lava_sink",
 			() -> BlockEntityType.Builder.of(InfiniteLavaSinkBlockEntity::new, ModBlocks.INFINITE_LAVA_SINK.get()).build(null));
+
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FaucetBlockTile>> FAUCET =
+		BLOCK_ENTITIES.register("faucet",
+			() -> BlockEntityType.Builder.of(FaucetBlockTile::new, ModBlocks.FAUCET.get()).build(null));
 
 	public static void register(IEventBus bus) {
 		BLOCK_ENTITIES.register(bus);

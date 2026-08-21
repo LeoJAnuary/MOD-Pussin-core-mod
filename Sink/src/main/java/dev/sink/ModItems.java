@@ -21,6 +21,7 @@ public class ModItems {
 			.displayItems((parameters, output) -> {
 				output.accept(ModBlocks.INFINITE_SINK.get());
 				output.accept(ModBlocks.INFINITE_LAVA_SINK.get());
+				output.accept(ModBlocks.FAUCET.get());
 			})
 			.build());
 
