@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sink:block/infinite_lava_sink" },
+    "facing=east": { "model": "sink:block/infinite_lava_sink", "y": 90 },
+    "facing=south": { "model": "sink:block/infinite_lava_sink", "y": 180 },
+    "facing=west": { "model": "sink:block/infinite_lava_sink", "y": 270 }
+  }
+}

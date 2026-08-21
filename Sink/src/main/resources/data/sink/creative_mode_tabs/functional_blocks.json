@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:creative_tab",
+  "tab": "minecraft:functional_blocks",
+  "item": "sink:infinite_sink"
+}
